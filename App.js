@@ -66,6 +66,7 @@ function MainApp() {
           label='CEP'
           placeholder='Digite o CEP'
           onChangeText={(x) => setCep(x)}
+         // onBlur={() => buscaCep(cep)}
           style={{
             borderColor: 'black',
             borderWidth: 1,
@@ -74,6 +75,15 @@ function MainApp() {
             margin: 5,
           }}
         />
+
+        <Button
+          icon='card-search'
+          mode='outlined'
+          onPress={() => buscaCep(cep)}
+        >
+          Buscar
+        </Button>
+
         <TextInput
           label='Rua'
           mode='outlined'
@@ -106,13 +116,7 @@ function MainApp() {
           </List.Accordion>
         </List.Section>
 
-        <Button
-          icon='card-search'
-          mode='outlined'
-          onPress={() => buscaCep(cep)}
-        >
-          Buscar
-        </Button>
+
         <Text>{selectedEstado}</Text>
 
         <Button mode='contained'>Criar usuário</Button>
