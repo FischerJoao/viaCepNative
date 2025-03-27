@@ -57,13 +57,13 @@ export default function App() {
         <TextInput
           label='Digite seu nome'
           mode='outlined'
-          value={nome}
+          value={dados.nome}
           onChangeText={(text) => setNome(text)}
         />
         <TextInput
           label='Digite seu e-mail'
           mode='outlined'
-          value={email}
+          value={dados.email}
           onChangeText={(text) => setEmail(text)}
         />
         <List.Section title='Genero'>
@@ -76,6 +76,7 @@ export default function App() {
       </View>
       <View style={styles.container}>
         <TextInput
+        label='CEP'
           placeholder='Digite o CEP'
           onChangeText={(x) => { setCep(x) }}
           style={{
